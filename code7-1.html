@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <!--
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 7
+   Coding Challenge 1
+   
+   Author:  Noora Kattan
+   Date:    11/07/2024
+   Filename: code7-1.html
+   -->
+   <meta charset="utf-8">
+   <title>Coding Challenge 7-1</title>
+
+   <!-- Linking the CSS file for styling the form elements -->
+   <link href="code7-1_forms.css" rel="stylesheet" type="text/css">
+
+   <!-- Linking the JavaScript file for handling form submission actions -->
+   <script type="text/javascript" src="formsubmit.js"></script>
+
+</head>
+<body>
+   <!-- Main heading for the page -->
+   <h1>Enter User Account</h1>
+    <!-- The form setup to post data to the login-script.php for processing -->
+   <form action="login-script.php" method="post">
+      <!-- Fieldset groups form elements, providing structure and accessibility -->
+      <fieldset id="login">
+         <legend>Enter Account Information</legend>
+
+         <!-- Username field label and input box -->
+         <label for="username">Username</label>
+         <input type="text" id="username" name="user" required><br><br>
+
+         <!-- Password field label and input box -->
+         <label for="password">Password</label>
+         <input type="password" id="password" name="pwd" required><br><br>
+
+         <!-- Account type label and dropdown selection -->
+         <label for="acctype">Account Type</label>
+         <select id="acctype" name="accounttype" size="3"> <!-- Selecting menu with options for account type -->
+             <option value="type1">administrator</option>  <!-- Admin account option -->
+             <option value="type2">member</option>         <!-- Member account option -->
+             <option value="type3">guest</option>          <!-- Guest account option -->
+         </select><br><br>
+      </fieldset>
+
+   <!-- The Submit button to send the form data for processing -->
+   <input type="submit" value="Login" />
+   </form>
+</body>
+</html>
